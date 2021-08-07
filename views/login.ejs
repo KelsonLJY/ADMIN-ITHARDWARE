@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>IT Hardware</title>
+    <style>
+        body{
+          font-family: 'Open Sans', sans-serif;
+          /* background:#3498db; */
+          margin: 0 auto 0 auto;  
+          width:100%; 
+          text-align:center;
+          margin: 20px 0px 20px 0px;   
+        }
+
+        p{
+          font-size:12px;
+          text-decoration: none;
+          color:#ffffff;
+        }
+
+        h1{
+          font-size:1.5em;
+          color:#525252;
+        }
+
+        .box{
+          background:white;
+          width:300px;
+          border-radius:6px;
+          margin: 0 auto 0 auto;
+          padding:0px 0px 70px 0px;
+          margin-top : 250px;
+          border: #ecf0f1 4px solid; 
+        }
+
+        .email{
+          background:#ecf0f1;
+          border: #ccc 1px solid;
+          border-bottom: #ccc 2px solid;
+          padding: 8px;
+          width:250px;
+          color:#AAAAAA;
+          margin-top:10px;
+          font-size:1em;
+          border-radius:4px;
+        }
+
+        .password{
+          border-radius:4px;
+          background:#ecf0f1;
+          border: #ccc 1px solid;
+          padding: 8px;
+          width:250px;
+          font-size:1em;
+        }
+
+        .btn{
+          background:#2ecc71;
+          width:265px;
+          padding-top:5px;
+          padding-bottom:5px;
+          color:white;
+          border-radius:4px;
+          border: #27ae60 1px solid;
+  
+          margin-top:20px;
+          margin-bottom:20px;
+          float:left;
+          margin-left:16px;
+          font-weight:800;
+          font-size:0.8em;
+        }
+
+        .btn:hover{
+          background:#2CC06B; 
+        }
+
+        #btn2{
+          float:left;
+          background:#3498db;
+          width:125px;  padding-top:5px;
+          padding-bottom:5px;
+          color:white;
+          border-radius:4px;
+          border: #2980b9 1px solid;
+  
+          margin-top:20px;
+          margin-bottom:20px;
+          margin-left:10px;
+          font-weight:800;
+          font-size:0.8em;
+        }
+
+        #btn2:hover{ 
+        background:#3594D2; 
+        }
+    </style>
+       
+
+
+</head>
+
+<body >
+    <div id="app">
+        <form autocomplete="off">
+            <div class="box">
+            <h1>Admin Login</h1>
+            <label style="float: left;margin-left:15px;">Email</label>
+            <input type="email" name="email"   class="email" v-validate="'required'" v-model="user.email"/>
+        
+            <label style="float: left;margin-left:15px;margin-top:10px;">Password</label>
+            <input type="password" name="password"  class="email"  v-validate="'required'" v-model="user.password"/>
+        
+            <input type="submit" value="Login"  @click.prevent="login" class="btn">
+            </div> <!-- End Box -->
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+   
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
